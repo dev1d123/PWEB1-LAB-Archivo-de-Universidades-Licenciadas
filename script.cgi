@@ -21,11 +21,17 @@ my $csv = Text::CSV->new({ binary => 1, sep_char => '|' });
 # Abrir el archivo CSV en modo lectura (<), mediante el identificador $fh
 open my $fh, '<', $archivo;
 
-# Leer e imprimir la primera fila del archivo CSV
-while (my $fila = $csv->getline($fh)) {
-    print @$fila, "\n";
+#El codigo CGI generara una tabla con todos los valores que cumplan con las condiciones indicadas por los parametros.
+#Lo primero a hacer es crear los encabezados y en HTML los encabezados de tabla tienen la siguiente forma: <th>Valor</th>
+
+my $tableKey = "";
+if (my $fila = $csv->getline($fh)) {
     my $cadena = join(', ', @$fila);
+    for my $valor (@$fila) {
+        $tableKey .= "<th>$valor</th>\n";
+    }
 }
+
 # Cerrar el archivo
 close $fh;
 
