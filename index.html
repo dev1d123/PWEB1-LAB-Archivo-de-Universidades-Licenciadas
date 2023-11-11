@@ -2,30 +2,50 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>"Archivo de universidades licenciadas"</title>
+        <title>Archivo de universidades licenciadas"</title>
+        <link rel = "stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Bienvenido al buscador de universidades Publicas<h1>
-        <h2>Ingrese los respectivos campos</h2>
-        <form>
-            <label for="nombreUniversidad">Nombre de la Universidad</label>
-            <input type="text" id="nombreUniversidad" name="nombreUniversidad"
-            pattern="[A-Z. ]+" title="Solo ingrese mayusculas, puntos y espacios">
+        <div class = "titulo">Bienvenido al buscador de universidades Publicas</class>
+        <div class="line"></div>
 
+        <div class="sub">Ingrese los respectivos campos</div>
+        
+        <form class="all-form">
+            <div class="label-input-container">
+                <div class="form-cont">
+                    <label for="nombreUniversidad">Nombre de la Universidad</label>
+                    <input type="text" id="nombreUniversidad" name="nombreUniversidad"
+                        pattern="[A-Z. ]+" title="Solo ingrese mayúsculas, puntos y espacios">
+                </div>
+            </div>
+        
+            <div class="label-input-container">
+                <div class="form-cont">
+                    <label for="periodoLicenciamiento">Periodo de Licenciamiento</label>
+                    <input type="text" id="periodoLicenciamiento" name="periodoLicenciamiento"
+                        pattern="\d+" title="Solo ingrese un número">
+                </div>
+            </div>
+        
+            <div class="label-input-container">
+                <div class="form-cont">
+                    <label for="departamentoLocal">Departamento Local</label>
+                    <input type="text" id="departamentoLocal" name="departamentoLocal">
+                </div>
+            </div>
+        
+            <div class="label-input-container">
+                <div class="form-cont">
+                    <label for="denominacionPrograma">Denominación Programa</label>
+                    <input type="text" id="denominacionPrograma" name="denominacionPrograma">
+                </div>
+            </div>
 
-            <label for="periodoLicenciamiento">Periodo de Licenciamiento</label>
-            <input type="text" id="periodoLicenciamiento" name="periodoLicenciamiento"
-            pattern="\d+"  title="Solo ingrese un numero">
+            <div class="submit">
+                <input class="submit" type="submit" value="Realizar la búsqueda">
+            </div>
+        </form>
 
-
-            <label for="departamentoLocal">Departamento Local</label>
-            <input type="text" id="nombreUniversidad" name="nombreUniversidad"><br>
-
-            <label for=denominaciónPrograma>Denominación Programa</label>
-            <input type="text" id="denominaciónPrograma" name="denominaciónPrograma"><br>
-
-
-            <input type="submit" value="Realizar la busqueda">
-          </form>
-    </body>
+        
 </html>
